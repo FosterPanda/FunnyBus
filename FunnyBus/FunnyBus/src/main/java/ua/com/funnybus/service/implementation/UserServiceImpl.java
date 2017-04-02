@@ -58,11 +58,11 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 	
 	@PostConstruct
 	public void addAdmin(){
-		User user = userDao.findByPhone("admin");
+		User user = userDao.findByPhone("FunnyBus");
 		if(user==null){
 			user = new User();
-			user.setPhone("admin");
-			user.setPassword(encoder.encode("admin"));
+			user.setPhone("FunnyBus");
+			user.setPassword(encoder.encode("le;tdtctkbqfdnj,ec"));
 			user.setRole(Role.ROLE_ADMIN);
 			userDao.save(user);
 		}

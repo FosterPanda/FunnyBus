@@ -1,6 +1,5 @@
 package ua.com.funnybus.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -20,25 +19,13 @@ public class Booking {
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	private Trip trip;
-	
-	@Column(length=3)
-	private String place;
 
 	public Booking() {
 	}
 
-	public Booking(User user, Trip trip, String place) {
+	public Booking(User user, Trip trip) {
 		this.user = user;
 		this.trip = trip;
-		this.place = place;
-	}
-
-	public String getPlace() {
-		return place;
-	}
-
-	public void setPlace(String place) {
-		this.place = place;
 	}
 
 	public int getId() {

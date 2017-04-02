@@ -58,12 +58,11 @@ public class BookingServiceImpl implements BookingService {
 		User user= userService.findUniqueOrCreate(bookingForm.getPhone(),bookingForm.getFirstName(),bookingForm.getSecondName());
 		Trip trip=bookingForm.getTrip();
 		Booking booking=new Booking();
-		booking.setPlace(bookingForm.getPlace());
 		booking.setUser(user);
 		booking.setTrip(trip);
-		Smser smser = new Smser(booking);
-		smser.userSender();
-		smser.adminSender();
+//		Smser smser = new Smser(booking);
+//		smser.userSender();
+//		smser.adminSender();
 		bookingDao.save(booking);
 	}
 

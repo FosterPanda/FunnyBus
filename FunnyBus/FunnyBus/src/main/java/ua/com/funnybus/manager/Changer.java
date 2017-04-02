@@ -84,36 +84,54 @@ public class Changer {
 				SimpleDateFormat dateFormat1 = new SimpleDateFormat("u");
 				String dayS=dateFormat1.format(dMax);
 				int wd=Integer.valueOf(dayS);
-				String UA = "Україна";
-				String CH="Чехія";
-				String PL="Польща";
-				if(wd==2 || wd==3){
-					Trip trip1=new Trip();
-					trip1.setDate(dMax);
-					trip1.setWay(UA);
-					tripService.update(trip1);
-				}else if(wd==4 || wd==5){
+				String BUS="Городенка - Івано-Франківськ - Прага";
+				String MICRO="Україна - Словаччина - Чехія";
+				String UA="з України";
+				String CH="з Чехії";
+				if(wd==2){
 					Trip trip1=new Trip();
 					Trip trip2=new Trip();
-					Trip trip3=new Trip();
 					trip1.setDate(dMax);
 					trip2.setDate(dMax);
-					trip3.setDate(dMax);
-					trip1.setWay(UA);
-					trip2.setWay(CH);
-					trip3.setWay(PL);
+					trip1.setPlace(UA);
+					trip2.setPlace(UA);
+					trip2.setWay(BUS);
+					trip1.setWay(MICRO);
 					tripService.update(trip1);
 					tripService.update(trip2);
-					tripService.update(trip3);
-				}else if(wd==6 || wd==7){
+				}else if(wd==4){
+					Trip trip1=new Trip();
 					Trip trip2=new Trip();
-					Trip trip3=new Trip();
+					trip1.setDate(dMax);
 					trip2.setDate(dMax);
-					trip3.setDate(dMax);
-					trip2.setWay(CH);
-					trip3.setWay(PL);
+					trip1.setPlace(CH);
+					trip2.setPlace(CH);
+					trip1.setWay(BUS);
+					trip2.setWay(MICRO);
+					tripService.update(trip1);
 					tripService.update(trip2);
-					tripService.update(trip3);
+				}else if(wd==5){
+					Trip trip1=new Trip();
+					Trip trip2=new Trip();
+					trip1.setDate(dMax);
+					trip2.setDate(dMax);
+					trip1.setPlace(UA);
+					trip2.setPlace(UA);
+					trip1.setWay(BUS);
+					trip2.setWay(MICRO);
+					tripService.update(trip1);
+					tripService.update(trip2);
+				}else if(wd==7){
+					Trip trip1=new Trip();
+					Trip trip2=new Trip();
+					trip1.setDate(dMax);
+					trip2.setDate(dMax);
+					trip1.setPlace(CH);
+					trip2.setPlace(CH);
+					trip1.setWay(BUS);
+					trip2.setWay(MICRO);
+					tripService.update(trip1);
+					tripService.update(trip2);
 				}
 				j++;
 			}	

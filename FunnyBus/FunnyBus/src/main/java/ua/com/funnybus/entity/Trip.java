@@ -21,15 +21,26 @@ public class Trip {
 	
 	private Date date;
 	
+	private String place;
+	
 	@OneToMany(mappedBy="trip")
 	private List<Booking> bookings;
 
 	public Trip() {
 	}
 
-	public Trip(String way, Date date) {
+	public Trip(String way, Date date, String place) {
 		this.way = way;
 		this.date = date;
+		this.place = place;
+	}
+
+	public String getPlace() {
+		return place;
+	}
+
+	public void setPlace(String place) {
+		this.place = place;
 	}
 
 	public Date getDate() {
@@ -63,39 +74,6 @@ public class Trip {
 	public void setBookings(List<Booking> bookings) {
 		this.bookings = bookings;
 	}
-	public String getUa(){
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-		SimpleDateFormat dateDay = new SimpleDateFormat("u");
-		String dateNew=dateFormat.format(date);
-		String d=dateDay.format(date);
-		int day = Integer.valueOf(d);
-		if(way.equals("Україна")){
-			return dater(day)+" "+dateNew;
-		}
-		return null;
-	}
-	public String getCh(){
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-		SimpleDateFormat dateDay = new SimpleDateFormat("u");
-		String dateNew=dateFormat.format(date);
-		String d=dateDay.format(date);
-		int day = Integer.valueOf(d);
-		if(way.equals("Чехія")){
-			return dater(day)+" "+dateNew;
-		}
-		return null;		
-	}
-	public String getPl(){
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-		SimpleDateFormat dateDay = new SimpleDateFormat("u");
-		String dateNew=dateFormat.format(date);
-		String d=dateDay.format(date);
-		int day = Integer.valueOf(d);
-		if(way.equals("Польща")){
-			return dater(day)+" "+dateNew;
-		}
-		return null;	
-	}
 	
 	public String getFull(){
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
@@ -104,6 +82,15 @@ public class Trip {
 		String d=dateDay.format(date);
 		int day = Integer.valueOf(d);
 		return way+" "+dateNew+" "+dater(day);
+	}
+	
+	public String getField(){
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+		SimpleDateFormat dateDay = new SimpleDateFormat("u");
+		String dateNew=dateFormat.format(date);
+		String d=dateDay.format(date);
+		int day = Integer.valueOf(d);
+		return place+" "+dateNew+" "+dater(day);
 	}
 	
 	public String getData(){
@@ -144,6 +131,7 @@ public class Trip {
 		else if(day==4)return "Четвер";
 		else if(day==5)return "П'ятниця";
 		else if(day==6)return "Субота";
-		else return "Неділя";
+		else if(day==7)return "Неділя";
+		else return "Невідомо";
 	}
 }

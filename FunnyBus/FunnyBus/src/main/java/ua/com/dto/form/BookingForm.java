@@ -6,7 +6,6 @@ import ua.com.funnybus.entity.User;
 public class BookingForm {
 	
 	private int id;
-	private String place;
 	private User user;
 	private Trip trip;
 	
@@ -22,12 +21,6 @@ public class BookingForm {
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	public String getPlace() {
-		return place;
-	}
-	public void setPlace(String place) {
-		this.place = place;
 	}
 	public User getUser() {
 		return user;

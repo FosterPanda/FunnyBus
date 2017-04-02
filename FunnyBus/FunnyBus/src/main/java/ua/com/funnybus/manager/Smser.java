@@ -28,8 +28,7 @@ public class Smser {
 		String secondName=booking.getUser().getSecondName();
 		String phone=booking.getUser().getPhone();
 		String trip=booking.getTrip().getFull();
-		String place=booking.getPlace();
-		String message = "Замовлення: "+firstName+" "+secondName+" "+phone+" "+trip+", місць: "+place+".";
+		String message = "Замовлення: "+firstName+" "+secondName+" "+phone+" "+trip+".";
 		if(bm<=50){
 			message= message+" У вас на рахунку менше "+b+" грн";
 		}
@@ -42,8 +41,7 @@ public class Smser {
 		String phone = booking.getUser().getPhone();
 		String way = booking.getTrip().getWay();
 		String date = booking.getTrip().getData();
-		String place=booking.getPlace();
-		String message = "Доброго дня, "+firstName+" "+secondName+", Ви забронювали поїздку по напрямку "+way+": "+date+", місць: "+place;
+		String message = "Доброго дня, "+firstName+" "+secondName+", Ви забронювали поїздку по напрямку "+way+": "+date;
 		sms.send_sms(phone, message, translit, time, id, format, sender, query);
 	}
 }

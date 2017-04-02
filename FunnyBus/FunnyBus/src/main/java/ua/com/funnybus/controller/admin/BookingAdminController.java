@@ -28,39 +28,27 @@ public class BookingAdminController {
 		return new Booking();
 	}
 	
-	@GetMapping("/ua")
+	@GetMapping("/bus")
 	public String ukraine(Model model, @PageableDefault(direction=Sort.Direction.DESC, sort="id", size=20) Pageable pageable){
-		model.addAttribute("page", bookingService.findAllOnWay("Україна",pageable));
-		return "admin-bookingUa";
+		model.addAttribute("page", bookingService.findAllOnWay("Городенка - Івано-Франківськ - Прага",pageable));
+		return "admin-bookingBus";
 	}
 	
-	@GetMapping("/ua/delete/{id}")
+	@GetMapping("/bus/delete/{id}")
 	public String deleteUa(@PathVariable int id){
 		bookingService.delete(id);
-		return "redirect:/admin/ua";
+		return "redirect:/admin/bus";
 	}
 	
-	@GetMapping("/ch")
+	@GetMapping("/micro")
 	public String czech(Model model, @PageableDefault(direction=Sort.Direction.DESC, sort="id", size=20) Pageable pageable){
-		model.addAttribute("page", bookingService.findAllOnWay("Чехія",pageable));
-		return "admin-bookingCh";
+		model.addAttribute("page", bookingService.findAllOnWay("Україна - Словаччина - Чехія",pageable));
+		return "admin-bookingMicro";
 	}
 	
-	@GetMapping("/ch/delete/{id}")
+	@GetMapping("/micro/delete/{id}")
 	public String deleteCh(@PathVariable int id){
 		bookingService.delete(id);
-		return "redirect:/admin/ch";
-	}
-	
-	@GetMapping("/pl")
-	public String poland(Model model, @PageableDefault(direction=Sort.Direction.DESC, sort="id", size=20) Pageable pageable){
-		model.addAttribute("page", bookingService.findAllOnWay("Польща",pageable));
-		return "admin-bookingPl";
-	}
-	
-	@GetMapping("/pl/delete/{id}")
-	public String deletePl(@PathVariable int id){
-		bookingService.delete(id);
-		return "redirect:/admin/pl";
+		return "redirect:/admin/micro";
 	}
 }

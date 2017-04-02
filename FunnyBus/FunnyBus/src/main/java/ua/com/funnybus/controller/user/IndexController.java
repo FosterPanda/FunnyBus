@@ -52,4 +52,9 @@ public class IndexController {
 		return "user-reusu";
 	}
 	
+	@GetMapping("/kontakt")
+	public String kontakt(){
+		return "user-kontakt";
+	}
+	
 }

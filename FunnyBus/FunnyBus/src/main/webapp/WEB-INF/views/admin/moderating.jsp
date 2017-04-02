@@ -13,15 +13,19 @@
 				<span class="icon-bar"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="myNavbar">
+			
+				<div class="container">
+				<div class="col-md-offset-1 col-md-10">
 				<ul class="nav navbar-nav">
 					<li><a href="/admin/new">Новини</a></li>
 					<li><a href="/admin/aid">Допомога біцям АТО</a></li>
 					<li><a href="/admin/act">Акції</a></li>
 					<li class="active"><a href="/admin/moderating">Відгуки</a></li>
-					<li><a href="/admin/ua">Україна</a></li>
-					<li><a href="/admin/ch">Чехія</a></li>
-					<li><a href="/admin/pl">Польща</a></li>
+					<li><a href="/admin/bus">Автобусні</a></li>
+					<li class="active"><a href="/admin/micro">Мікроавтобус</a></li>
 				</ul>
+				</div>
+				</div>
 			</div>
 		</div>
 	</nav>

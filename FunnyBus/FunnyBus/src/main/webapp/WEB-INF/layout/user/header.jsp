@@ -15,15 +15,15 @@
                 </div>
                 <div class="col-md-2 top">
                     <ul>
-                        <li><a href="https://vk.com/vesavt"><i class="fa fa-vk"></i></a></li>
-                        <li><a href="https://www.instagram.com/funny_bus_ua/"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://m.ok.ru/dk?st.cmd=altGroupMain&st.groupId=57451988910140&_prevCmd=userAltGroups&tkn=1996&_aid=groupOwnShowcase"><i class="fa fa-odnoklassniki"></i></a></li>
-                        <li><a href="https://www.facebook.com/profile.php?id=100011019304856&fref=ts"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://vk.com/vesavt" target="_blank"><i class="fa fa-vk"></i></a></li>
+                        <li><a href="https://www.instagram.com/funny_bus_ua/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://m.ok.ru/dk?st.cmd=altGroupMain&st.groupId=57451988910140&_prevCmd=userAltGroups&tkn=1996&_aid=groupOwnShowcase" target="_blank"><i class="fa fa-odnoklassniki"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100011019304856&fref=ts" target="_blank"><i class="fa fa-facebook"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 topss">
                 <ul>
-               <li> <a href="/booking"><button type="button" class="btn btn-danger" >Бронювання</button></a></li>
+               <li> <a href="/booking"><button type="button" class="btn btn-primary" >Бронювання</button></a></li>
                         </ul>
             </div>
         </div>
@@ -31,9 +31,9 @@
     </header>
     <div class="mainMenu">
         <nav class="navbar navbar-default navbar-static">
-                <div class="container">
+                <div class="container ">
             <div class="row">
-  <div class="container-fluid">
+  <div class="container-fluid ">
     <div class="navbar-header">
       <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -68,7 +68,7 @@
          <li><a href="/actions">АКЦІЇ
 </a></li>
         <li><a href="rent.html">ОРЕНДА ТРАНСПОРТУ</a></li>
-        <li><a href="#">КОНТАКТИ</a></li>
+        <li><a href="/kontakt">КОНТАКТИ</a></li>
         <li><a href="/reviews">ВІДГУКИ</a></li>
       </ul>
     </div>

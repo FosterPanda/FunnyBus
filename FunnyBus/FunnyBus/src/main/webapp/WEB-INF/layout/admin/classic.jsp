@@ -13,20 +13,83 @@
  <head>
     <meta charset="UTF-8">
     <title>Funny Bus</title>
-    <link href="/resources/css/style.css" rel="stylesheet">
+    <link href="/resources/styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link rel="stylesheet" href="/resources/css/font-awesome.min.css"> </head>
      <link rel="shortcut icon" href="/resources/css/img/logo.png">
-<script>
-	$(function() {
-		$('select').chosen();
-	});
-</script>
 
 <style type="text/css">
 body{
 background-color: #e5e5e5; 
 }
+.navbar{
+background-color:   #DCDCDC;
+}
+.lorem{
+	font-size: 17px;
+}
+.kontakt{
+float: left;
+}
+.topss{
+margin-top: 8px;
+}
+header{
+	background-color:#333;
+}
+footer{
+	background-color:#333;
+}
+.kontakt img{
+margin-left:5px;
+}
+.btnss{
+margin-left: 20px; 
+}
+.adminHeader{
+margin-left: 250px;
+}
+.knopku-bron{
+margin-left: 15px;
+}
+@media(min-width:481px) and (max-width:768px) { 
+     .nazva {
+          display: block;
+        clear: both;
+        margin-left: 200px;
+        }
+    .logo1{
+        display: block;
+        clear: both;
+        margin-left: 200px;
+       
+    }
+    
+     .logo2{
+        display: block;
+        clear: both;
+        margin-left: 170px;
+    }
+    .fotr{
+        display: block;
+        clear: both;
+        margin-top: 50px;
+        
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) { 
+    .nazva {
+          display: block;
+        clear: both;
+        margin-left: 290px;
+        }
+    .logo1{
+        display: block;
+        clear: both;
+        margin-left: 260px;
+    }
+
 @media (min-width: 1000px) {
     .navbar .navbar-nav {
         display: inline-block;

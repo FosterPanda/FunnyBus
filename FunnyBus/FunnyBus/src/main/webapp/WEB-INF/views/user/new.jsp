@@ -7,9 +7,10 @@
  <content>
          <div class="container">
             <div class="col-md-12">
-                <div class="lorem"> <b><h3><center>Новини</center></h3></b>
-                <br><h4>Тут ви можете слідкувати за усіма найцікавішими новинами нашого автобусу, а також ознайомлюватися з цікавими фактами про Чехію, дізнаватися про нововведення і інші новини. Заходьте сюди частіше, щоб бути вкурсі всього нового! 
-                </h4></div>
+                <div class="lorem"> <b><h3><center>НОВИНИ</center></h3></b>
+                <p>Тут ви можете слідкувати за усіма найцікавішими новинами нашого автобусу, а також ознайомлюватися з цікавими фактами про Чехію, дізнаватися про нововведення і інші новини. Заходьте сюди частіше, щоб бути вкурсі всього нового! 
+                </p>
+                </div>
             </div>
               <div class="col-md-12"><br><br></div>
              </div>
@@ -24,8 +25,10 @@
 			</div> -->
     <c:forEach items="${page.content}" var="nev">
 				<div class="row">
+				
 				<div class="col-md-9 col-sm-9">
-					<div class="col-md-10 col-sm-10"><h3>${nev.title}</h3></div>
+			
+					<div class="col-md-10 col-sm-10"><h4>${nev.title}</h4></div>
 					<div class="col-md-2 col-sm-2"><div class="date"><h4>${nev.data}</h4></div></div><br>
 					<div class="col-md-12 col-sm-12"><h4>${nev.info}</h4></div>
 				</div>

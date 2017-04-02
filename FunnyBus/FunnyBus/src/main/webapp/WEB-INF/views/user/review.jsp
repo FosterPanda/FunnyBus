@@ -7,44 +7,58 @@
 			    <div class="container">
 							<div class="row">
 							<br>
-								<div class="col-md-4 col-sm-4">
+								<div class="col-md-4 col-sm-4 addKoment">
 									<form:form class="form-horizontal comentar" action="/reviews" method="POST" modelAttribute="review">
 											<div class="col-md-12 col-sm-12 text-center">
 											<h3>Додати коментар</h3>
 											</div>
 											<div class="form-group">
 												<div class="row">
-													<div class="col-md-5 col-sm-5 ">
-															<label  class="col-sm-2 control-label">Імя</label>
-														</div>
-														<div class="col-md-5 col-sm-5 ">
-															<label  class="col-sm-2 control-label">Прізвище</label>
+												 <div class="lorem">
+													
+														
 														</div>
 												</div>
 												</div>
 												<div class="form-group">
 													<div class="row">
-														<div class="col-md-5 col-sm-5 ">
+													 <div class="lorem">
+													 <div class="col-md-5 col-sm-5 ">
+															<label  class="col-sm-2 control-label">Ім'я</label>
+														</div>
+														
+													</div>
+														
+														
+														<div class="col-md-7 col-sm-7 ">
 															<form:input class="form-control" path="firstName" id="firstName"/>
+														</div>
+														</div>
+														<div class="col-md-12">
+														<br>
+														</div>
+														<div class="row">
+														<div class="lorem">
+														<div class="col-md-5 col-sm-5 ">
+															<label  class="col-sm-2 control-label">Прізвище</label>
 														</div>
 														<div class="col-md-7 col-sm-7 ">
 															<form:input class="form-control" path="secondName" id="secondName"/>
+														</div>
 														</div>
 													</div>
 												</div>
 												
 												<div class="form-group">
 													<div class="col-md-12 col-sm-12 ">
-															<label  class="text-left">Коментарі</label>
+													 <div class="lorem">
+															<label  class="text-left">Коментар</label>
 														</div>
-															<form:input class="form-control" path="text" id="text"/>
-														
+														</div>
+															<p><textarea rows="7" cols="60" name="text"></textarea></p>
+															<button type="submit" class="btn btn-default btnses"  onclick="wow()">Додати</button>
 												</div>
-												<div class="form-group">
-							    					<div class="col-sm-offset-2 col-sm-10">
-							      						<button type="submit" class="btn btn-default"  onclick="wow()">Додати</button>
-							    					</div>
-							  					</div>
+												
 												</form:form>
 												<script>
 											        function wow(){
@@ -52,20 +66,22 @@
 											        }
 											    </script>
 								</div>
-								<div class="col-md-8 col-sm-8">
+								<div class=" col-md-offset-1 col-md-6 col-sm-6">
 									<div class="col-md-12 col-sm-12 text-center">
-											<h3>Коментар</h3>
+											<h3>Коментарі</h3>
 											</div>
 											<div class="col-md-12 col-sm-12 ">
 												<br>
 												</div>
 								<c:forEach items="${page.content}" var="review">
+								 <div class="lorem">
 										<div class="col-md-12 col-sm-12">
 											<div class="col-md-4 col-sm-4">${review.user.firstName} ${review.user.secondName}</div>
 											<div class="col-md-offset-6 col-sm-offset-6 col-md-2 col-sm-2">${review.data}</div>
 											<div class="col-md-12 col-sm-12 "></div>
 											<div class="col-md-12 col-sm-12">${review.text}</div>
 											<div class="col-md-12 col-sm-12 "><br></div>
+										</div>
 										</div>
 								</c:forEach>
 								</div>
